@@ -71,6 +71,3 @@ The PipeNetwork affine variant was selected over Poolside NVFP4 because it is 5.
 - `data/tune-*`: raw MTPLX tuner output.
 - `data/laguna-s-2.1-mlx-4bit.json`: Laguna benchmark measurements.
 
-## Security audit
-
-Thirty repositories owned by `ttarif` were scanned across reachable Git history with Gitleaks and targeted provider patterns: 14 public and 16 private. No confirmed live credentials were found. Scanner hits were deterministic test canaries or upstream fork fixtures.
