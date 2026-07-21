@@ -1,0 +1,132 @@
+{
+  "context_results": [
+    {
+      "runtime": "Bonsai Q2 MLX",
+      "prompt_tokens": 62922,
+      "pp_tps": 220.29,
+      "tg_tps": 25.18,
+      "peak_gb": 19.097
+    },
+    {
+      "runtime": "Bonsai Q2 MLX",
+      "prompt_tokens": 125832,
+      "pp_tps": 146.87,
+      "tg_tps": 9.81,
+      "peak_gb": 29.124
+    },
+    {
+      "runtime": "Bonsai Q2 MLX",
+      "prompt_tokens": 247692,
+      "pp_tps": 90.02,
+      "tg_tps": 4.85,
+      "peak_gb": 48.254
+    },
+    {
+      "runtime": "MTPLX 35B D2 q8 chunk4096",
+      "prompt_tokens": 62922,
+      "pp_tps": 836.36,
+      "tg_tps": 40.15,
+      "peak_gb": 33.2
+    },
+    {
+      "runtime": "MTPLX 35B D2 q8 chunk4096",
+      "prompt_tokens": 125832,
+      "pp_tps": 357.73,
+      "tg_tps": 20.27,
+      "peak_gb": 42.83
+    },
+    {
+      "runtime": "MTPLX 35B D2 q8 chunk4096",
+      "prompt_tokens": 247692,
+      "pp_tps": 173.62,
+      "tg_tps": 7.57,
+      "peak_gb": 62.13
+    },
+    {
+      "runtime": "MTPLX 35B D2 KV-off chunk2048",
+      "prompt_tokens": 62922,
+      "pp_tps": 882.0,
+      "tg_tps": 44.52,
+      "peak_gb": 27.85
+    },
+    {
+      "runtime": "MTPLX 27B D2 KV-off chunk2048",
+      "prompt_tokens": 62922,
+      "pp_tps": 208.3,
+      "tg_tps": 20.83,
+      "peak_gb": 29.93
+    },
+    {
+      "runtime": "MTPLX 27B updated Turbo D2 KV-off chunk2048",
+      "prompt_tokens": 62922,
+      "pp_tps": 208.12,
+      "tg_tps": 19.91,
+      "peak_gb": 30.64
+    },
+    {
+      "runtime": "MTPLX 4B D2 KV-off chunk2048",
+      "prompt_tokens": 62922,
+      "pp_tps": 719.38,
+      "tg_tps": 30.91,
+      "peak_gb": 10.9
+    },
+    {
+      "runtime": "Qwen3.5 35B AR MLX-VLM",
+      "prompt_tokens": 62922,
+      "pp_tps": 750.74,
+      "tg_tps": 47.2,
+      "peak_gb": 27.67
+    },
+    {
+      "runtime": "Qwen3.5 35B DFlash block8",
+      "prompt_tokens": 62922,
+      "pp_tps": 762.05,
+      "tg_tps": 25.36,
+      "peak_gb": 28.0
+    }
+  ],
+  "short_results": [
+    {
+      "runtime": "Bonsai Q1 MLX",
+      "tokens": 256,
+      "tg_tps": 43.94,
+      "peak_gb": 4.213
+    },
+    {
+      "runtime": "Bonsai Q2 MLX",
+      "tokens": 256,
+      "tg_tps": 43.65,
+      "peak_gb": 7.341
+    },
+    {
+      "runtime": "Qwen3.5 35B AR MLX-VLM",
+      "tokens": 256,
+      "tg_tps": 63.56,
+      "peak_gb": 20.92
+    },
+    {
+      "runtime": "Qwen3.5 35B DFlash block8",
+      "tokens": 256,
+      "tg_tps": 103.95,
+      "peak_gb": 23.27
+    },
+    {
+      "runtime": "MTPLX 4B D2",
+      "tokens": 256,
+      "wall_s": 2.466,
+      "effective_tps": 103.81
+    },
+    {
+      "runtime": "MTPLX 27B updated Turbo D2",
+      "tokens": 256,
+      "wall_s": 7.663,
+      "effective_tps": 33.41
+    },
+    {
+      "runtime": "MTPLX 35B D2",
+      "tokens": 256,
+      "wall_s": 3.281,
+      "effective_tps": 78.03
+    }
+  ]
+}

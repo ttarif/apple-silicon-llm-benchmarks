@@ -1,0 +1,990 @@
+{
+  "action": "tune",
+  "artifacts": {
+    "root": "/private/tmp/outputs/cli/tune/tune-20260721-122739",
+    "summary": "/private/tmp/outputs/cli/tune/tune-20260721-122739/tune.json"
+  },
+  "backend": {
+    "custom_qmv_or_qmm_env": {},
+    "mlx_core_path": "/opt/homebrew/var/mtplx/venv-2.2.0/lib/python3.13/site-packages/mlx/core.cpython-313-darwin.so",
+    "mlx_lm_version": "0.31.3",
+    "mlx_version": "0.32.0",
+    "stock_mlx_likely": true
+  },
+  "best": {
+    "control_field": "depth",
+    "depth": 3,
+    "draft_block_size": null,
+    "mode": "D3",
+    "multiplier_vs_ar": 1.3794582416988597,
+    "tok_s": 108.92734484755813
+  },
+  "best_multiplier": {
+    "acceptance_collapsed": [],
+    "ar_tok_s": 78.96385809650144,
+    "available": true,
+    "failure_reasons": [],
+    "quality_rejected": [],
+    "raw_winner": {
+      "control_field": "depth",
+      "depth": 2,
+      "draft_block_size": null,
+      "mode": "D2",
+      "multiplier_vs_ar": 1.3899632220433868,
+      "tok_s": 109.75685862478993
+    },
+    "tie_breaker": {
+      "applied": true,
+      "prefer_deeper_within_pct": 2.0
+    },
+    "verdict": "mtp_depth_wins",
+    "winner": {
+      "control_field": "depth",
+      "depth": 3,
+      "draft_block_size": null,
+      "mode": "D3",
+      "multiplier_vs_ar": 1.3794582416988597,
+      "tok_s": 108.92734484755813
+    }
+  },
+  "control_field": "depth",
+  "diagnostics": {
+    "fans_pinned": true,
+    "model_source_notes": [],
+    "telemetry_enabled": false,
+    "telemetry_env": "MTPLX_BENCH_TUNE_TELEMETRY"
+  },
+  "fans_pinned": true,
+  "hardware": {
+    "arm64": 1,
+    "chip": "Apple M1 Ultra",
+    "chip_family": "Apple M1 Ultra",
+    "efficiency_cores": 4,
+    "hw_model": "Mac13,2",
+    "logical_cpu": 20,
+    "machine": "arm64",
+    "macos_build": "26A5353q",
+    "macos_version": "27.0",
+    "memory_gib": 128.0,
+    "perf_cores": 16,
+    "physical_cpu": 20,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "system": "Darwin"
+  },
+  "model": "/Users/ttarif/.mtplx/models/Youssofal--Qwen3.5-4B-MTPLX-Optimized-Speed",
+  "profile": "performance-cold",
+  "results": [
+    {
+      "artifact": "/private/tmp/outputs/cli/tune/tune-20260721-122739/ar.json",
+      "candidate": "ar",
+      "command": [
+        "/opt/homebrew/var/mtplx/venv-2.2.0/bin/python",
+        "-m",
+        "mtplx.cli",
+        "tune",
+        "--_candidate",
+        "ar",
+        "--_candidate-output",
+        "/private/tmp/outputs/cli/tune/tune-20260721-122739/ar.json",
+        "--model",
+        "/Users/ttarif/.mtplx/models/Youssofal--Qwen3.5-4B-MTPLX-Optimized-Speed",
+        "--profile",
+        "performance-cold",
+        "--max-tokens",
+        "512",
+        "--limit",
+        "1",
+        "--seed",
+        "0",
+        "--depths",
+        "1,2,3",
+        "--yes",
+        "--mtp-cache-policy",
+        "persistent",
+        "--mtp-history-policy",
+        "committed",
+        "--temperature",
+        "0.6",
+        "--top-p",
+        "0.95",
+        "--top-k",
+        "20"
+      ],
+      "control_field": "depth",
+      "decode_elapsed_s": 2.9887090839911252,
+      "decode_tok_s": 78.96385809650144,
+      "depth": null,
+      "draft_block_size": null,
+      "elapsed_s": 3.2620381669839844,
+      "end_to_end_tok_s": 72.34740610598094,
+      "finish_reasons": {
+        "stop": 1
+      },
+      "generated_tokens": 236,
+      "generation_window_s": 3.2777328491210938,
+      "generation_windows": [
+        {
+          "duration_s": 3.2777328491210938,
+          "end": 1784662068.976744,
+          "start": 1784662065.699011
+        }
+      ],
+      "hit_token_budget": false,
+      "hit_token_budget_count": 0,
+      "mode": "AR",
+      "multiplier_vs_ar": 1.0,
+      "prompt_eval_time_s": 0.2733290829928592,
+      "quality_failure_validations": [],
+      "quality_inconclusive_validations": [],
+      "quality_passed": true,
+      "returncode": 0,
+      "stdout": "/private/tmp/outputs/cli/tune/tune-20260721-122739/ar.log",
+      "tok_s": 78.96385809650144,
+      "validations_passed": 2,
+      "validations_total": 2,
+      "verify_ms_per_call": null
+    },
+    {
+      "acceptance_by_depth": [
+        0.935064935064935
+      ],
+      "acceptance_percent_by_depth": [
+        93.5064935064935
+      ],
+      "accepted_by_depth": [
+        216
+      ],
+      "artifact": "/private/tmp/outputs/cli/tune/tune-20260721-122739/d1.json",
+      "candidate": "1",
+      "command": [
+        "/opt/homebrew/var/mtplx/venv-2.2.0/bin/python",
+        "-m",
+        "mtplx.cli",
+        "tune",
+        "--_candidate",
+        "1",
+        "--_candidate-output",
+        "/private/tmp/outputs/cli/tune/tune-20260721-122739/d1.json",
+        "--model",
+        "/Users/ttarif/.mtplx/models/Youssofal--Qwen3.5-4B-MTPLX-Optimized-Speed",
+        "--profile",
+        "performance-cold",
+        "--max-tokens",
+        "512",
+        "--limit",
+        "1",
+        "--seed",
+        "0",
+        "--depths",
+        "1,2,3",
+        "--yes",
+        "--mtp-cache-policy",
+        "persistent",
+        "--mtp-history-policy",
+        "committed",
+        "--temperature",
+        "0.6",
+        "--top-p",
+        "0.95",
+        "--top-k",
+        "20"
+      ],
+      "control_field": "depth",
+      "decode_elapsed_s": 5.136532083968632,
+      "decode_tok_s": 92.08547562201669,
+      "depth": 1,
+      "draft_block_size": null,
+      "drafted_by_depth": [
+        231
+      ],
+      "elapsed_s": 5.376421666936949,
+      "end_to_end_tok_s": 87.9767304913562,
+      "finish_reasons": {
+        "stop": 1
+      },
+      "generated_tokens": 473,
+      "generation_window_s": 5.390928030014038,
+      "generation_windows": [
+        {
+          "duration_s": 5.390928030014038,
+          "end": 1784662081.610806,
+          "start": 1784662076.219878
+        }
+      ],
+      "hit_token_budget": false,
+      "hit_token_budget_count": 0,
+      "mean_accept_probability_by_depth": [
+        0.9360039713422647
+      ],
+      "mode": "D1",
+      "multiplier_vs_ar": 1.1661724470134092,
+      "prompt_eval_time_s": 0.23988958296831697,
+      "quality_failure_validations": [],
+      "quality_inconclusive_validations": [],
+      "quality_passed": true,
+      "returncode": 0,
+      "stdout": "/private/tmp/outputs/cli/tune/tune-20260721-122739/d1.log",
+      "tok_s": 92.08547562201669,
+      "validations_passed": 2,
+      "validations_total": 2,
+      "verify_calls": 234,
+      "verify_eval_ms_per_call": 15.83565044033731,
+      "verify_forward_ms_per_call": 2.498824093152538,
+      "verify_hidden_eval_ms_per_call": 13.059792937671082,
+      "verify_ms_per_call": 18.33447453348985,
+      "verify_time_s": 4.290267040836625
+    },
+    {
+      "acceptance_by_depth": [
+        0.9285714285714286,
+        0.7458563535911602
+      ],
+      "acceptance_percent_by_depth": [
+        92.85714285714286,
+        74.58563535911603
+      ],
+      "accepted_by_depth": [
+        169,
+        135
+      ],
+      "artifact": "/private/tmp/outputs/cli/tune/tune-20260721-122739/d2.json",
+      "candidate": "2",
+      "command": [
+        "/opt/homebrew/var/mtplx/venv-2.2.0/bin/python",
+        "-m",
+        "mtplx.cli",
+        "tune",
+        "--_candidate",
+        "2",
+        "--_candidate-output",
+        "/private/tmp/outputs/cli/tune/tune-20260721-122739/d2.json",
+        "--model",
+        "/Users/ttarif/.mtplx/models/Youssofal--Qwen3.5-4B-MTPLX-Optimized-Speed",
+        "--profile",
+        "performance-cold",
+        "--max-tokens",
+        "512",
+        "--limit",
+        "1",
+        "--seed",
+        "0",
+        "--depths",
+        "1,2,3",
+        "--yes",
+        "--mtp-cache-policy",
+        "persistent",
+        "--mtp-history-policy",
+        "committed",
+        "--temperature",
+        "0.6",
+        "--top-p",
+        "0.95",
+        "--top-k",
+        "20"
+      ],
+      "control_field": "depth",
+      "decode_elapsed_s": 4.6648565421346575,
+      "decode_tok_s": 109.75685862478993,
+      "depth": 2,
+      "draft_block_size": null,
+      "drafted_by_depth": [
+        182,
+        181
+      ],
+      "elapsed_s": 4.900229917024262,
+      "end_to_end_tok_s": 104.48489329474558,
+      "finish_reasons": {
+        "length": 1
+      },
+      "generated_tokens": 512,
+      "generation_window_s": 4.9143147468566895,
+      "generation_windows": [
+        {
+          "duration_s": 4.9143147468566895,
+          "end": 1784662093.749435,
+          "start": 1784662088.8351202
+        }
+      ],
+      "hit_token_budget": true,
+      "hit_token_budget_count": 1,
+      "mean_accept_probability_by_depth": [
+        0.930110941126481,
+        0.7287255048016898
+      ],
+      "mode": "D2",
+      "multiplier_vs_ar": 1.3899632220433868,
+      "prompt_eval_time_s": 0.23537337488960475,
+      "quality_failure_validations": [],
+      "quality_inconclusive_validations": [
+        {
+          "detail": "unclosed delimiter(s): [",
+          "name": "balanced_delimiters",
+          "row_index": 0
+        }
+      ],
+      "quality_passed": true,
+      "returncode": 0,
+      "stdout": "/private/tmp/outputs/cli/tune/tune-20260721-122739/d2.log",
+      "tok_s": 109.75685862478993,
+      "validations_passed": 1,
+      "validations_total": 2,
+      "verify_calls": 185,
+      "verify_eval_ms_per_call": 17.682831360631294,
+      "verify_forward_ms_per_call": 2.720313988676345,
+      "verify_hidden_eval_ms_per_call": 14.155971399206367,
+      "verify_ms_per_call": 20.40314534930764,
+      "verify_time_s": 3.7745818896219134
+    },
+    {
+      "acceptance_by_depth": [
+        0.9492753623188406,
+        0.8260869565217391,
+        0.6594202898550725
+      ],
+      "acceptance_percent_by_depth": [
+        94.92753623188406,
+        82.6086956521739,
+        65.94202898550725
+      ],
+      "accepted_by_depth": [
+        131,
+        114,
+        91
+      ],
+      "artifact": "/private/tmp/outputs/cli/tune/tune-20260721-122739/d3.json",
+      "candidate": "3",
+      "command": [
+        "/opt/homebrew/var/mtplx/venv-2.2.0/bin/python",
+        "-m",
+        "mtplx.cli",
+        "tune",
+        "--_candidate",
+        "3",
+        "--_candidate-output",
+        "/private/tmp/outputs/cli/tune/tune-20260721-122739/d3.json",
+        "--model",
+        "/Users/ttarif/.mtplx/models/Youssofal--Qwen3.5-4B-MTPLX-Optimized-Speed",
+        "--profile",
+        "performance-cold",
+        "--max-tokens",
+        "512",
+        "--limit",
+        "1",
+        "--seed",
+        "0",
+        "--depths",
+        "1,2,3",
+        "--yes",
+        "--mtp-cache-policy",
+        "persistent",
+        "--mtp-history-policy",
+        "committed",
+        "--temperature",
+        "0.6",
+        "--top-p",
+        "0.95",
+        "--top-k",
+        "20"
+      ],
+      "control_field": "depth",
+      "decode_elapsed_s": 4.434148291009478,
+      "decode_tok_s": 108.92734484755813,
+      "depth": 3,
+      "draft_block_size": null,
+      "drafted_by_depth": [
+        138,
+        138,
+        138
+      ],
+      "elapsed_s": 4.674725124961697,
+      "end_to_end_tok_s": 103.3215829998042,
+      "finish_reasons": {
+        "stop": 1
+      },
+      "generated_tokens": 483,
+      "generation_window_s": 4.68881368637085,
+      "generation_windows": [
+        {
+          "duration_s": 4.68881368637085,
+          "end": 1784662105.6768079,
+          "start": 1784662100.9879942
+        }
+      ],
+      "hit_token_budget": false,
+      "hit_token_budget_count": 0,
+      "mean_accept_probability_by_depth": [
+        0.9402888943434798,
+        0.8076000099640558,
+        0.6610324951875124
+      ],
+      "mode": "D3",
+      "multiplier_vs_ar": 1.3794582416988597,
+      "prompt_eval_time_s": 0.2405768339522183,
+      "quality_failure_validations": [],
+      "quality_inconclusive_validations": [],
+      "quality_passed": true,
+      "returncode": 0,
+      "stdout": "/private/tmp/outputs/cli/tune/tune-20260721-122739/d3.log",
+      "tok_s": 108.92734484755813,
+      "validations_passed": 2,
+      "validations_total": 2,
+      "verify_calls": 139,
+      "verify_eval_ms_per_call": 22.29724213625003,
+      "verify_forward_ms_per_call": 2.584158023316815,
+      "verify_hidden_eval_ms_per_call": 17.658648404406666,
+      "verify_ms_per_call": 24.881400159566844,
+      "verify_time_s": 3.4585146221797913
+    }
+  ],
+  "run_id": "tune-20260721-122739",
+  "saved": true,
+  "settings": {
+    "base_hidden_variant": null,
+    "candidate_settle_s": 5.0,
+    "concat_order": null,
+    "control_field": "depth",
+    "depths": "1,2,3",
+    "draft_core": null,
+    "draft_temperature": null,
+    "draft_top_k": null,
+    "draft_top_p": null,
+    "limit": 1,
+    "max_tokens": 512,
+    "mtp_cache_policy": "persistent",
+    "mtp_hidden_variant": null,
+    "mtp_history_policy": "committed",
+    "profile": "performance-cold",
+    "seed": 0,
+    "suite": "cold-long-code-192",
+    "temperature": 0.6,
+    "thinking": "disabled",
+    "tie_prefer_deeper_within_pct": 2.0,
+    "top_k": 20,
+    "top_p": 0.95
+  },
+  "software": {
+    "git_branch": "not a git worktree",
+    "git_status": "not a git worktree",
+    "mlx_lm_version": "0.31.3",
+    "mlx_version": "0.32.0",
+    "mtplx_version": "2.2.0",
+    "numpy_version": "2.5.1",
+    "python_executable": "/opt/homebrew/var/mtplx/venv-2.2.0/bin/python",
+    "python_version": "3.13.14 (main, Jun 10 2026, 12:24:04) [Clang 21.0.0 (clang-2100.0.123.102)]"
+  },
+  "state_path": "/Users/ttarif/.mtplx/tuning.json",
+  "suite": "cold-long-code-192",
+  "thermal": {
+    "enabled": true,
+    "recovery": {
+      "recovered": false,
+      "stale_pid": null,
+      "still_running": false
+    },
+    "restore": {
+      "after": {
+        "actual_max_rpm": 3512,
+        "actual_min_rpm": 3504,
+        "capacity_max_rpm": 3500,
+        "capacity_min_rpm": 3500,
+        "fans": [
+          {
+            "actual_rpm": 3504,
+            "max_capacity_rpm": 3500,
+            "mode": "manual",
+            "raw": {
+              "actual_rpm": 3504,
+              "index": 0,
+              "max_rpm": 3500,
+              "min_rpm": 1100,
+              "mode": "manual",
+              "target_rpm": 3500
+            },
+            "rpm": 3504,
+            "target_rpm": 3500
+          },
+          {
+            "actual_rpm": 3512,
+            "max_capacity_rpm": 3500,
+            "mode": "manual",
+            "raw": {
+              "actual_rpm": 3512,
+              "index": 1,
+              "max_rpm": 3500,
+              "min_rpm": 1100,
+              "mode": "manual",
+              "target_rpm": 3500
+            },
+            "rpm": 3512,
+            "target_rpm": 3500
+          }
+        ],
+        "max_rpm": 3512,
+        "min_rpm": 3504,
+        "ok": true,
+        "raw": {
+          "attempts": [
+            {
+              "command": [
+                "/Users/ttarif/.mtplx/bin/thermalforge",
+                "status"
+              ],
+              "ok": true,
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "{\n  \"fans\" : [\n    {\n      \"actual_rpm\" : 3504,\n      \"index\" : 0,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"manual\",\n      \"target_rpm\" : 3500\n    },\n    {\n      \"actual_rpm\" : 3512,\n      \"index\" : 1,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"manual\",\n      \"target_rpm\" : 3500\n    }\n  ],\n  \"temperatures\" : {\n    \"TCDX\" : 49.3,\n    \"TCMb\" : 51,\n    \"TH0x\" : 30.5,\n    \"TMVR\" : 38.7,\n    \"TPDX\" : 40.8,\n    \"TRDX\" : 42.2,\n    \"TS0P\" : 39.2,\n    \"Tg05\" : 50,\n    \"Tg0D\" : 49.7,\n    \"Tg0L\" : 50.4,\n    \"Tg0T\" : 50.5,\n    \"Tg0j\" : 48.8,\n    \"Tm02\" : 38.5,\n    \"Tm06\" : 39.6,\n    \"Tm08\" : 39.5,\n    \"Tm09\" : 39.5,\n    \"Tp01\" : 49.8,\n    \"Tp02\" : 54.5,\n    \"Tp04\" : 40.6,\n    \"Tp05\" : 49.6,\n    \"Tp06\" : 54.6,\n    \"Tp08\" : 39.9,\n    \"Tp09\" : 48.9,\n    \"Tp0A\" : 52.1,\n    \"Tp0C\" : 40.3,\n    \"Tp0D\" : 49.5,\n    \"Tp0G\" : 38,\n    \"Tp0H\" : 47.1,\n    \"Tp0L\" : 47.8,\n    \"Tp0P\" : 49.3,\n    \"Tp0S\" : 37.5,\n    \"Tp0T\" : 46.5,\n    \"Tp0W\" : 39.4,\n    \"Tp0X\" : 48.4,\n    \"Tp0b\" : 49.3\n  }\n}"
+            }
+          ],
+          "detection": {
+            "available": true,
+            "clock_anchor_enabled": false,
+            "clock_anchor_policy": "explicit experimental only; never used for product claims",
+            "instructions": "Install ThermalForge and ensure the thermalforge CLI is on PATH.",
+            "selected": {
+              "kind": "thermalforge",
+              "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+              "version": {
+                "command": [
+                  "/Users/ttarif/.mtplx/bin/thermalforge",
+                  "--version"
+                ],
+                "ok": true,
+                "returncode": 0,
+                "stderr": "",
+                "stdout": "0.1.0"
+              }
+            },
+            "tools": [
+              {
+                "kind": "thermalforge",
+                "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+                "version": {
+                  "command": [
+                    "/Users/ttarif/.mtplx/bin/thermalforge",
+                    "--version"
+                  ],
+                  "ok": true,
+                  "returncode": 0,
+                  "stderr": "",
+                  "stdout": "0.1.0"
+                }
+              }
+            ]
+          },
+          "ok": true,
+          "status": {
+            "command": [
+              "/Users/ttarif/.mtplx/bin/thermalforge",
+              "status"
+            ],
+            "ok": true,
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\n  \"fans\" : [\n    {\n      \"actual_rpm\" : 3504,\n      \"index\" : 0,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"manual\",\n      \"target_rpm\" : 3500\n    },\n    {\n      \"actual_rpm\" : 3512,\n      \"index\" : 1,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"manual\",\n      \"target_rpm\" : 3500\n    }\n  ],\n  \"temperatures\" : {\n    \"TCDX\" : 49.3,\n    \"TCMb\" : 51,\n    \"TH0x\" : 30.5,\n    \"TMVR\" : 38.7,\n    \"TPDX\" : 40.8,\n    \"TRDX\" : 42.2,\n    \"TS0P\" : 39.2,\n    \"Tg05\" : 50,\n    \"Tg0D\" : 49.7,\n    \"Tg0L\" : 50.4,\n    \"Tg0T\" : 50.5,\n    \"Tg0j\" : 48.8,\n    \"Tm02\" : 38.5,\n    \"Tm06\" : 39.6,\n    \"Tm08\" : 39.5,\n    \"Tm09\" : 39.5,\n    \"Tp01\" : 49.8,\n    \"Tp02\" : 54.5,\n    \"Tp04\" : 40.6,\n    \"Tp05\" : 49.6,\n    \"Tp06\" : 54.6,\n    \"Tp08\" : 39.9,\n    \"Tp09\" : 48.9,\n    \"Tp0A\" : 52.1,\n    \"Tp0C\" : 40.3,\n    \"Tp0D\" : 49.5,\n    \"Tp0G\" : 38,\n    \"Tp0H\" : 47.1,\n    \"Tp0L\" : 47.8,\n    \"Tp0P\" : 49.3,\n    \"Tp0S\" : 37.5,\n    \"Tp0T\" : 46.5,\n    \"Tp0W\" : 39.4,\n    \"Tp0X\" : 48.4,\n    \"Tp0b\" : 49.3\n  }\n}"
+          }
+        },
+        "target_max_rpm": 3500,
+        "target_min_rpm": 3500
+      },
+      "message": "fan profile restored",
+      "ok": true,
+      "profile": "silent",
+      "set_result": {
+        "attempts": [
+          {
+            "command": [
+              "sudo",
+              "-n",
+              "/Users/ttarif/.mtplx/bin/thermalforge",
+              "auto"
+            ],
+            "ok": true,
+            "returncode": 0,
+            "stderr": "No matching processes were found",
+            "stdout": "Fans reset to Apple defaults"
+          }
+        ],
+        "command": [
+          "sudo",
+          "-n",
+          "/Users/ttarif/.mtplx/bin/thermalforge",
+          "auto"
+        ],
+        "detection": {
+          "available": true,
+          "clock_anchor_enabled": false,
+          "clock_anchor_policy": "explicit experimental only; never used for product claims",
+          "instructions": "Install ThermalForge and ensure the thermalforge CLI is on PATH.",
+          "selected": {
+            "kind": "thermalforge",
+            "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+            "version": {
+              "command": [
+                "/Users/ttarif/.mtplx/bin/thermalforge",
+                "--version"
+              ],
+              "ok": true,
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "0.1.0"
+            }
+          },
+          "tools": [
+            {
+              "kind": "thermalforge",
+              "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+              "version": {
+                "command": [
+                  "/Users/ttarif/.mtplx/bin/thermalforge",
+                  "--version"
+                ],
+                "ok": true,
+                "returncode": 0,
+                "stderr": "",
+                "stdout": "0.1.0"
+              }
+            }
+          ]
+        },
+        "dry_run": false,
+        "ok": true,
+        "profile": "silent"
+      }
+    },
+    "start": {
+      "attempts": [
+        {
+          "command": [
+            "sudo",
+            "-n",
+            "/Users/ttarif/.mtplx/bin/thermalforge",
+            "max"
+          ],
+          "ok": true,
+          "returncode": 0,
+          "stderr": "",
+          "stdout": "Fan 0: 1336 RPM \u2192 max (3500 RPM)\nFan 1: 1333 RPM \u2192 max (3500 RPM)"
+        }
+      ],
+      "command": [
+        "sudo",
+        "-n",
+        "/Users/ttarif/.mtplx/bin/thermalforge",
+        "max"
+      ],
+      "detection": {
+        "available": true,
+        "clock_anchor_enabled": false,
+        "clock_anchor_policy": "explicit experimental only; never used for product claims",
+        "instructions": "Install ThermalForge and ensure the thermalforge CLI is on PATH.",
+        "selected": {
+          "kind": "thermalforge",
+          "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+          "version": {
+            "command": [
+              "/Users/ttarif/.mtplx/bin/thermalforge",
+              "--version"
+            ],
+            "ok": true,
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "0.1.0"
+          }
+        },
+        "tools": [
+          {
+            "kind": "thermalforge",
+            "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+            "version": {
+              "command": [
+                "/Users/ttarif/.mtplx/bin/thermalforge",
+                "--version"
+              ],
+              "ok": true,
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "0.1.0"
+            }
+          }
+        ]
+      },
+      "dry_run": false,
+      "ok": true,
+      "profile": "performance"
+    },
+    "verified": {
+      "after": {
+        "actual_max_rpm": 3006,
+        "actual_min_rpm": 3000,
+        "capacity_max_rpm": 3500,
+        "capacity_min_rpm": 3500,
+        "fans": [
+          {
+            "actual_rpm": 3006,
+            "max_capacity_rpm": 3500,
+            "mode": "manual",
+            "raw": {
+              "actual_rpm": 3006,
+              "index": 0,
+              "max_rpm": 3500,
+              "min_rpm": 1100,
+              "mode": "manual",
+              "target_rpm": 3500
+            },
+            "rpm": 3006,
+            "target_rpm": 3500
+          },
+          {
+            "actual_rpm": 3000,
+            "max_capacity_rpm": 3500,
+            "mode": "manual",
+            "raw": {
+              "actual_rpm": 3000,
+              "index": 1,
+              "max_rpm": 3500,
+              "min_rpm": 1100,
+              "mode": "manual",
+              "target_rpm": 3500
+            },
+            "rpm": 3000,
+            "target_rpm": 3500
+          }
+        ],
+        "max_rpm": 3006,
+        "min_rpm": 3000,
+        "ok": true,
+        "raw": {
+          "attempts": [
+            {
+              "command": [
+                "/Users/ttarif/.mtplx/bin/thermalforge",
+                "status"
+              ],
+              "ok": true,
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "{\n  \"fans\" : [\n    {\n      \"actual_rpm\" : 3006,\n      \"index\" : 0,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"manual\",\n      \"target_rpm\" : 3500\n    },\n    {\n      \"actual_rpm\" : 3000,\n      \"index\" : 1,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"manual\",\n      \"target_rpm\" : 3500\n    }\n  ],\n  \"temperatures\" : {\n    \"TCDX\" : 42.2,\n    \"TCMb\" : 50.8,\n    \"TH0x\" : 32.5,\n    \"TMVR\" : 39.5,\n    \"TPDX\" : 41.1,\n    \"TRDX\" : 41.3,\n    \"TS0P\" : 39.5,\n    \"Tg05\" : 44.7,\n    \"Tg0D\" : 43.9,\n    \"Tg0L\" : 45.5,\n    \"Tg0T\" : 45.4,\n    \"Tg0j\" : 43.2,\n    \"Tm02\" : 36.6,\n    \"Tm06\" : 37.1,\n    \"Tm08\" : 37.8,\n    \"Tm09\" : 37.8,\n    \"Tp01\" : 47.6,\n    \"Tp02\" : 52.6,\n    \"Tp04\" : 38.2,\n    \"Tp05\" : 47.2,\n    \"Tp06\" : 52.2,\n    \"Tp08\" : 39.4,\n    \"Tp09\" : 48.4,\n    \"Tp0A\" : 51.9,\n    \"Tp0C\" : 40.9,\n    \"Tp0D\" : 50,\n    \"Tp0G\" : 38.3,\n    \"Tp0H\" : 47.4,\n    \"Tp0L\" : 46.5,\n    \"Tp0P\" : 47.8,\n    \"Tp0S\" : 37.8,\n    \"Tp0T\" : 46.9,\n    \"Tp0W\" : 39.8,\n    \"Tp0X\" : 48.7,\n    \"Tp0b\" : 49.5\n  }\n}"
+            }
+          ],
+          "detection": {
+            "available": true,
+            "clock_anchor_enabled": false,
+            "clock_anchor_policy": "explicit experimental only; never used for product claims",
+            "instructions": "Install ThermalForge and ensure the thermalforge CLI is on PATH.",
+            "selected": {
+              "kind": "thermalforge",
+              "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+              "version": {
+                "command": [
+                  "/Users/ttarif/.mtplx/bin/thermalforge",
+                  "--version"
+                ],
+                "ok": true,
+                "returncode": 0,
+                "stderr": "",
+                "stdout": "0.1.0"
+              }
+            },
+            "tools": [
+              {
+                "kind": "thermalforge",
+                "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+                "version": {
+                  "command": [
+                    "/Users/ttarif/.mtplx/bin/thermalforge",
+                    "--version"
+                  ],
+                  "ok": true,
+                  "returncode": 0,
+                  "stderr": "",
+                  "stdout": "0.1.0"
+                }
+              }
+            ]
+          },
+          "ok": true,
+          "status": {
+            "command": [
+              "/Users/ttarif/.mtplx/bin/thermalforge",
+              "status"
+            ],
+            "ok": true,
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\n  \"fans\" : [\n    {\n      \"actual_rpm\" : 3006,\n      \"index\" : 0,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"manual\",\n      \"target_rpm\" : 3500\n    },\n    {\n      \"actual_rpm\" : 3000,\n      \"index\" : 1,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"manual\",\n      \"target_rpm\" : 3500\n    }\n  ],\n  \"temperatures\" : {\n    \"TCDX\" : 42.2,\n    \"TCMb\" : 50.8,\n    \"TH0x\" : 32.5,\n    \"TMVR\" : 39.5,\n    \"TPDX\" : 41.1,\n    \"TRDX\" : 41.3,\n    \"TS0P\" : 39.5,\n    \"Tg05\" : 44.7,\n    \"Tg0D\" : 43.9,\n    \"Tg0L\" : 45.5,\n    \"Tg0T\" : 45.4,\n    \"Tg0j\" : 43.2,\n    \"Tm02\" : 36.6,\n    \"Tm06\" : 37.1,\n    \"Tm08\" : 37.8,\n    \"Tm09\" : 37.8,\n    \"Tp01\" : 47.6,\n    \"Tp02\" : 52.6,\n    \"Tp04\" : 38.2,\n    \"Tp05\" : 47.2,\n    \"Tp06\" : 52.2,\n    \"Tp08\" : 39.4,\n    \"Tp09\" : 48.4,\n    \"Tp0A\" : 51.9,\n    \"Tp0C\" : 40.9,\n    \"Tp0D\" : 50,\n    \"Tp0G\" : 38.3,\n    \"Tp0H\" : 47.4,\n    \"Tp0L\" : 46.5,\n    \"Tp0P\" : 47.8,\n    \"Tp0S\" : 37.8,\n    \"Tp0T\" : 46.9,\n    \"Tp0W\" : 39.8,\n    \"Tp0X\" : 48.7,\n    \"Tp0b\" : 49.5\n  }\n}"
+          }
+        },
+        "target_max_rpm": 3500,
+        "target_min_rpm": 3500
+      },
+      "baseline": {
+        "actual_max_rpm": 1336,
+        "actual_min_rpm": 1333,
+        "capacity_max_rpm": 3500,
+        "capacity_min_rpm": 3500,
+        "fans": [
+          {
+            "actual_rpm": 1336,
+            "max_capacity_rpm": 3500,
+            "mode": "auto",
+            "raw": {
+              "actual_rpm": 1336,
+              "index": 0,
+              "max_rpm": 3500,
+              "min_rpm": 1100,
+              "mode": "auto",
+              "target_rpm": 1330
+            },
+            "rpm": 1336,
+            "target_rpm": 1330
+          },
+          {
+            "actual_rpm": 1333,
+            "max_capacity_rpm": 3500,
+            "mode": "auto",
+            "raw": {
+              "actual_rpm": 1333,
+              "index": 1,
+              "max_rpm": 3500,
+              "min_rpm": 1100,
+              "mode": "auto",
+              "target_rpm": 1330
+            },
+            "rpm": 1333,
+            "target_rpm": 1330
+          }
+        ],
+        "max_rpm": 1336,
+        "min_rpm": 1333,
+        "ok": true,
+        "raw": {
+          "attempts": [
+            {
+              "command": [
+                "/Users/ttarif/.mtplx/bin/thermalforge",
+                "status"
+              ],
+              "ok": true,
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "{\n  \"fans\" : [\n    {\n      \"actual_rpm\" : 1336,\n      \"index\" : 0,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"auto\",\n      \"target_rpm\" : 1330\n    },\n    {\n      \"actual_rpm\" : 1333,\n      \"index\" : 1,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"auto\",\n      \"target_rpm\" : 1330\n    }\n  ],\n  \"temperatures\" : {\n    \"TCDX\" : 42.9,\n    \"TCMb\" : 50.7,\n    \"TH0x\" : 32.5,\n    \"TMVR\" : 39.6,\n    \"TPDX\" : 41.4,\n    \"TRDX\" : 41.5,\n    \"TS0P\" : 39.9,\n    \"Tg05\" : 44.7,\n    \"Tg0D\" : 44,\n    \"Tg0L\" : 45.7,\n    \"Tg0T\" : 45.4,\n    \"Tg0j\" : 43.2,\n    \"Tm02\" : 37.2,\n    \"Tm06\" : 37.5,\n    \"Tm08\" : 37.8,\n    \"Tm09\" : 37.8,\n    \"Tp01\" : 48.2,\n    \"Tp02\" : 53.2,\n    \"Tp04\" : 38.6,\n    \"Tp05\" : 47.6,\n    \"Tp06\" : 51.9,\n    \"Tp08\" : 39.9,\n    \"Tp09\" : 48.9,\n    \"Tp0A\" : 52.4,\n    \"Tp0C\" : 40.9,\n    \"Tp0D\" : 50.1,\n    \"Tp0G\" : 38.4,\n    \"Tp0H\" : 47.5,\n    \"Tp0L\" : 46.9,\n    \"Tp0P\" : 48,\n    \"Tp0S\" : 38.1,\n    \"Tp0T\" : 47.2,\n    \"Tp0W\" : 39.7,\n    \"Tp0X\" : 48.6,\n    \"Tp0b\" : 49.4\n  }\n}"
+            }
+          ],
+          "detection": {
+            "available": true,
+            "clock_anchor_enabled": false,
+            "clock_anchor_policy": "explicit experimental only; never used for product claims",
+            "instructions": "Install ThermalForge and ensure the thermalforge CLI is on PATH.",
+            "selected": {
+              "kind": "thermalforge",
+              "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+              "version": {
+                "command": [
+                  "/Users/ttarif/.mtplx/bin/thermalforge",
+                  "--version"
+                ],
+                "ok": true,
+                "returncode": 0,
+                "stderr": "",
+                "stdout": "0.1.0"
+              }
+            },
+            "tools": [
+              {
+                "kind": "thermalforge",
+                "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+                "version": {
+                  "command": [
+                    "/Users/ttarif/.mtplx/bin/thermalforge",
+                    "--version"
+                  ],
+                  "ok": true,
+                  "returncode": 0,
+                  "stderr": "",
+                  "stdout": "0.1.0"
+                }
+              }
+            ]
+          },
+          "ok": true,
+          "status": {
+            "command": [
+              "/Users/ttarif/.mtplx/bin/thermalforge",
+              "status"
+            ],
+            "ok": true,
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "{\n  \"fans\" : [\n    {\n      \"actual_rpm\" : 1336,\n      \"index\" : 0,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"auto\",\n      \"target_rpm\" : 1330\n    },\n    {\n      \"actual_rpm\" : 1333,\n      \"index\" : 1,\n      \"max_rpm\" : 3500,\n      \"min_rpm\" : 1100,\n      \"mode\" : \"auto\",\n      \"target_rpm\" : 1330\n    }\n  ],\n  \"temperatures\" : {\n    \"TCDX\" : 42.9,\n    \"TCMb\" : 50.7,\n    \"TH0x\" : 32.5,\n    \"TMVR\" : 39.6,\n    \"TPDX\" : 41.4,\n    \"TRDX\" : 41.5,\n    \"TS0P\" : 39.9,\n    \"Tg05\" : 44.7,\n    \"Tg0D\" : 44,\n    \"Tg0L\" : 45.7,\n    \"Tg0T\" : 45.4,\n    \"Tg0j\" : 43.2,\n    \"Tm02\" : 37.2,\n    \"Tm06\" : 37.5,\n    \"Tm08\" : 37.8,\n    \"Tm09\" : 37.8,\n    \"Tp01\" : 48.2,\n    \"Tp02\" : 53.2,\n    \"Tp04\" : 38.6,\n    \"Tp05\" : 47.6,\n    \"Tp06\" : 51.9,\n    \"Tp08\" : 39.9,\n    \"Tp09\" : 48.9,\n    \"Tp0A\" : 52.4,\n    \"Tp0C\" : 40.9,\n    \"Tp0D\" : 50.1,\n    \"Tp0G\" : 38.4,\n    \"Tp0H\" : 47.5,\n    \"Tp0L\" : 46.9,\n    \"Tp0P\" : 48,\n    \"Tp0S\" : 38.1,\n    \"Tp0T\" : 47.2,\n    \"Tp0W\" : 39.7,\n    \"Tp0X\" : 48.6,\n    \"Tp0b\" : 49.4\n  }\n}"
+          }
+        },
+        "target_max_rpm": 1330,
+        "target_min_rpm": 1330
+      },
+      "message": "fans ramped to max (actual 3000-3006 RPM; target 3500 RPM)",
+      "ok": true,
+      "profile": "performance",
+      "set_result": {
+        "attempts": [
+          {
+            "command": [
+              "sudo",
+              "-n",
+              "/Users/ttarif/.mtplx/bin/thermalforge",
+              "max"
+            ],
+            "ok": true,
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "Fan 0: 1336 RPM \u2192 max (3500 RPM)\nFan 1: 1333 RPM \u2192 max (3500 RPM)"
+          }
+        ],
+        "command": [
+          "sudo",
+          "-n",
+          "/Users/ttarif/.mtplx/bin/thermalforge",
+          "max"
+        ],
+        "detection": {
+          "available": true,
+          "clock_anchor_enabled": false,
+          "clock_anchor_policy": "explicit experimental only; never used for product claims",
+          "instructions": "Install ThermalForge and ensure the thermalforge CLI is on PATH.",
+          "selected": {
+            "kind": "thermalforge",
+            "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+            "version": {
+              "command": [
+                "/Users/ttarif/.mtplx/bin/thermalforge",
+                "--version"
+              ],
+              "ok": true,
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "0.1.0"
+            }
+          },
+          "tools": [
+            {
+              "kind": "thermalforge",
+              "path": "/Users/ttarif/.mtplx/bin/thermalforge",
+              "version": {
+                "command": [
+                  "/Users/ttarif/.mtplx/bin/thermalforge",
+                  "--version"
+                ],
+                "ok": true,
+                "returncode": 0,
+                "stderr": "",
+                "stdout": "0.1.0"
+              }
+            }
+          ]
+        },
+        "dry_run": false,
+        "ok": true,
+        "profile": "performance"
+      }
+    }
+  }
+}
