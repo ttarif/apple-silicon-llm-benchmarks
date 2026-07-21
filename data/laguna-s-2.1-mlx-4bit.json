@@ -1,0 +1,39 @@
+{
+  "model": "pipenetwork/Laguna-S-2.1-MLX-4bit",
+  "revision": "f379fa30e0d1f6bf53d8e3a802ecd791ae49a375",
+  "hardware": "Apple M1 Ultra 128GB",
+  "runtime": {
+    "mlx": "0.32.0",
+    "mlx_lm": "0.31.3"
+  },
+  "results": [
+    {
+      "prompt_tokens": 512,
+      "generation_tokens": 256,
+      "trials": 3,
+      "prompt_tps": 289.477,
+      "generation_tps": 19.341,
+      "peak_memory_gb": 66.768
+    },
+    {
+      "prompt_tokens": 8192,
+      "generation_tokens": 256,
+      "trials": 3,
+      "prompt_tps": 352.16,
+      "generation_tps": 18.316,
+      "peak_memory_gb": 67.89
+    },
+    {
+      "prompt_tokens": 65536,
+      "generation_tokens": 64,
+      "trials": 1,
+      "prompt_tps": 276.68,
+      "generation_tps": 22.223,
+      "peak_memory_gb": 70.721
+    }
+  ],
+  "warnings": [
+    "transformers reported unrecognized dual rope keys",
+    "tokenizer reported Mistral regex compatibility warning"
+  ]
+}

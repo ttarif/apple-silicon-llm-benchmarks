@@ -43,6 +43,20 @@ Reproducible local-model measurements from an Apple Mac Studio with an M1 Ultra 
 
 DFlash was byte-identical to greedy AR in a deterministic parity test. It accelerated short coding by 1.64x but regressed filled-64K TG because acceptance fell to 15.6%.
 
+## Laguna S 2.1 affine 4-bit
+
+Tested `pipenetwork/Laguna-S-2.1-MLX-4bit` with the pinned custom Laguna loader, MLX 0.32.0, and mlx-lm 0.31.3.
+
+| Prompt | Generation | PP tok/s | TG tok/s | Peak GB |
+|---:|---:|---:|---:|---:|
+| 512 | 256 | 289.5 | 19.3 | 66.8 |
+| 8,192 | 256 | 352.2 | 18.3 | 67.9 |
+| 65,536 | 64 | 276.7 | 22.2 | 70.7 |
+
+The 64K TG result used one short 64-token trial and should not be interpreted as a context-driven speedup. Laguna is substantially slower than the measured MTPLX 35B and Qwen3.5+DFlash lanes, but it targets agentic coding and provides a much larger context architecture.
+
+The PipeNetwork affine variant was selected over Poolside NVFP4 because it is 5.4 GiB smaller, bundles the required loader, advertises a 1M context, and leaves more unified-memory headroom. See [LAGUNA.md](LAGUNA.md).
+
 ## Main findings
 
 1. Qwen3.6 35B-A3B is the best measured primary local coding model: its sparse MoE activates about 3B parameters per token and outperforms dense 27B at long context.
@@ -55,7 +69,7 @@ DFlash was byte-identical to greedy AR in a deterministic parity test. It accele
 
 - `data/benchmark-summary.json`: normalized manually recorded measurements.
 - `data/tune-*`: raw MTPLX tuner output.
-- Laguna S 2.1 measurements will be added after its MLX compatibility run.
+- `data/laguna-s-2.1-mlx-4bit.json`: Laguna benchmark measurements.
 
 ## Security audit
 
