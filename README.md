@@ -65,6 +65,10 @@ The PipeNetwork affine variant was selected over Poolside NVFP4 because it is 5.
 4. The MTPLX 4B is an excellent low-memory worker at short context, but long-context TG falls to 30.9 tok/s.
 5. Loading multiple copies of one large model is usually inferior to one resident server with bounded concurrency: copies duplicate weights and KV pools. Use one model instance with queued/continuous batching, or route roles to different models only when they are already needed for quality tiers.
 
+## Exhaustive Laguna optimization
+
+See [LAGUNA-EXHAUSTIVE.md](LAGUNA-EXHAUSTIVE.md) for the matched MLX affine, NVFP4, oQ2e, oQ3e, GGUF, and DFlash comparison. The deployed winner is Laguna oQ2e with a runtime-Q4 DFlash drafter below 16K context and automatic AR fallback above 16K.
+
 ## Data
 
 - `data/benchmark-summary.json`: normalized manually recorded measurements.
