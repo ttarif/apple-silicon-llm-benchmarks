@@ -1,0 +1,213 @@
+{
+  "hardware": "Apple M1 Ultra 128GB",
+  "date": "2026-07-22",
+  "rows": [
+    {
+      "format": "MLX affine 4bit",
+      "mode": "AR",
+      "context": 512,
+      "pp": 303.0,
+      "tg": 29.3,
+      "peak_gb": 66.8
+    },
+    {
+      "format": "MLX affine 4bit",
+      "mode": "AR",
+      "context": 8192,
+      "pp": 352.5,
+      "tg": 29.5,
+      "peak_gb": 67.9
+    },
+    {
+      "format": "MLX affine 4bit",
+      "mode": "AR",
+      "context": 65536,
+      "pp": 270.5,
+      "tg": 21.6,
+      "peak_gb": 70.0
+    },
+    {
+      "format": "MLX affine 4bit",
+      "mode": "Q4 DFlash b8",
+      "context": 512,
+      "tg": 38.2,
+      "acceptance": 0.742,
+      "peak_gb": 66.9
+    },
+    {
+      "format": "MLX affine 4bit",
+      "mode": "Q4 DFlash b8",
+      "context": 8192,
+      "pp": 278.9,
+      "tg": 29.6,
+      "acceptance": 0.723,
+      "peak_gb": 71.3
+    },
+    {
+      "format": "MLX affine 4bit",
+      "mode": "Q4 DFlash b8",
+      "context": 65536,
+      "pp": 75.2,
+      "tg": 17.5,
+      "acceptance": 0.668,
+      "peak_gb": 105.0
+    },
+    {
+      "format": "MLX NVFP4",
+      "mode": "AR",
+      "context": 512,
+      "pp": 323.8,
+      "tg": 28.5,
+      "peak_gb": 67.6
+    },
+    {
+      "format": "MLX NVFP4",
+      "mode": "AR",
+      "context": 8192,
+      "pp": 407.9,
+      "tg": 21.8,
+      "peak_gb": 68.6
+    },
+    {
+      "format": "MLX NVFP4",
+      "mode": "AR",
+      "context": 65536,
+      "pp": 311.1,
+      "tg": 22.1,
+      "peak_gb": 71.6
+    },
+    {
+      "format": "MLX oQ2e",
+      "mode": "AR",
+      "context": 512,
+      "pp": 279.9,
+      "tg": 38.0,
+      "peak_gb": 34.4
+    },
+    {
+      "format": "MLX oQ2e",
+      "mode": "AR",
+      "context": 8192,
+      "pp": 360.5,
+      "tg": 36.0,
+      "peak_gb": 35.4
+    },
+    {
+      "format": "MLX oQ2e",
+      "mode": "AR",
+      "context": 65536,
+      "pp": 285.4,
+      "tg": 26.3,
+      "peak_gb": 38.4
+    },
+    {
+      "format": "MLX oQ2e",
+      "mode": "Q4 DFlash b8",
+      "context": 512,
+      "tg": 61.3,
+      "acceptance": 0.793,
+      "peak_gb": 37.0
+    },
+    {
+      "format": "MLX oQ2e",
+      "mode": "Q4 DFlash b8",
+      "context": 8192,
+      "pp": 343.0,
+      "tg": 41.2,
+      "acceptance": 0.711,
+      "peak_gb": 38.8
+    },
+    {
+      "format": "MLX oQ2e",
+      "mode": "Q4 DFlash b8",
+      "context": 65536,
+      "pp": 269.4,
+      "tg": 23.2,
+      "acceptance": 0.688,
+      "peak_gb": 42.6
+    },
+    {
+      "format": "MLX oQ3e",
+      "mode": "AR",
+      "context": 512,
+      "pp": 287.3,
+      "tg": 37.9,
+      "peak_gb": 46.5
+    },
+    {
+      "format": "MLX oQ3e",
+      "mode": "AR",
+      "context": 8192,
+      "pp": 360.4,
+      "tg": 36.3,
+      "peak_gb": 47.5
+    },
+    {
+      "format": "MLX oQ3e",
+      "mode": "AR",
+      "context": 65536,
+      "pp": 282.9,
+      "tg": 26.1,
+      "peak_gb": 50.5
+    },
+    {
+      "format": "MLX oQ3e",
+      "mode": "Q4 DFlash b8",
+      "context": 512,
+      "tg": 52.4,
+      "acceptance": 0.711,
+      "peak_gb": 50.0
+    },
+    {
+      "format": "MLX oQ3e",
+      "mode": "Q4 DFlash b8",
+      "context": 8192,
+      "pp": 337.2,
+      "tg": 38.7,
+      "acceptance": 0.711,
+      "peak_gb": 51.8
+    },
+    {
+      "format": "GGUF Q4_K_M",
+      "mode": "AR",
+      "context": 512,
+      "pp": 526.1,
+      "tg": 40.7,
+      "peak_gb": null
+    },
+    {
+      "format": "GGUF Q4_K_M",
+      "mode": "AR",
+      "context": 8192,
+      "pp": 490.8,
+      "tg": 40.7,
+      "peak_gb": null
+    },
+    {
+      "format": "GGUF Q4_K_M",
+      "mode": "AR",
+      "context": 59457,
+      "pp": 384.0,
+      "tg": 27.9,
+      "peak_gb": null
+    },
+    {
+      "format": "GGUF Q4_K_M",
+      "mode": "BF16 DFlash b15",
+      "context": 52,
+      "pp": 83.0,
+      "tg": 43.4,
+      "acceptance": 0.45,
+      "peak_gb": null
+    },
+    {
+      "format": "GGUF Q4_K_M",
+      "mode": "BF16 DFlash b15",
+      "context": 59457,
+      "pp": 378.1,
+      "tg": 2.8,
+      "acceptance": 0.0,
+      "peak_gb": null
+    }
+  ]
+}
